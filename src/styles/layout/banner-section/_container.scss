@@ -1,0 +1,45 @@
+section.banner {
+  transition: 4s;
+  background-image: url("http://www.hd-freewallpapers.com/latest-wallpapers/images-of-fruits-to-colour-wallpaper.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: slideInFromBottom 0.7s ease-in-out;
+
+  section.filter {
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 0);
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    display: flex;
+    animation: makeDarker 1s forwards 1s;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 40%;
+      position: absolute;
+      top: 60%;
+      left: 0;
+      z-index: 1;
+      background: linear-gradient(to top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0) 100%);
+    }
+  }
+}
+@keyframes makeDarker {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+  }
+
+  to {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}

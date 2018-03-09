@@ -1,0 +1,25 @@
+.box {
+  height: 35vh;
+  width: 46%;
+  min-width: 45%;
+  border: 1px solid black;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  animation: fadeInBox 1s forwards ease-in-out 1s;
+  justify-content: space-around;
+
+  h1 {
+    margin: 0 10px 0 10px;
+    font-size: 40px;
+    max-width: 340px;
+    color: white;
+    position: relative;
+  }
+  p{
+    margin: 0 10px 0 10px;
+    justify-content: space-around;
+    display: flex;
+    color: white;
+  }
+}

@@ -1,0 +1,10 @@
+@keyframes fadeInNav {
+  from {
+    transform: translateY(-200px) scale(2);
+  }
+
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}

@@ -1,0 +1,74 @@
+.formcontainer{
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 90vh;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 20px;
+  justify-content: flex-start;
+  border: 1px solid lightgrey;
+
+h1{
+  font-family: 'Titillium Web', sans-serif;
+  width: 800px;
+  margin-left: 112px;
+  margin-bottom: 10px;
+  font-weight: 200;
+  font-size: 33px;
+}
+
+.formular{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-left: 100px;
+  flex-direction: column;
+
+  input[type="button"]{
+    margin-left: 12px;
+    margin-top: 20px;
+    border-radius: 5px;
+    width:13%;
+    height: 50px;
+    color: white;
+    background-color: rgb(13, 155, 254);
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+  }
+
+.inputfield{
+  padding-left: 10px;
+  width:50%;
+  min-height: 30px;
+  font-size: 16px;
+  outline: none;
+  margin: 12px;
+
+
+  &:nth-child(1) {
+    display: flex;
+    height: 6.5vh;
+    -webkit-box-shadow: 1px 1px 29px 0px rgba(2,0,0,0.36);
+    -moz-box-shadow: 1px 1px 29px 0px rgba(3,0,0,0.36);
+    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.36);
+
+
+  }
+  &:nth-child(2) {
+    height: 6.5vh;
+    display: flex;
+  }
+  &:nth-child(3){
+    border-color: lightgrey;
+    resize: none;
+    height: 300px;
+    font-size: 16px;
+    padding-top: 10px;
+  }
+}
+
+}
+}

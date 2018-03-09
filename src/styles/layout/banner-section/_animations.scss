@@ -1,0 +1,20 @@
+@keyframes slideInFromBottom {
+  from {
+    transform: translateY(-300px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+@keyframes fadeInBox {
+  from {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

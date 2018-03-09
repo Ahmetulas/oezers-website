@@ -1,0 +1,69 @@
+.locations{
+  display: flex;
+  width:100%;
+  height: 50vh;
+  flex-direction: column;
+  justify-content: center;
+
+
+  .location-header{
+    margin-left: 70px;
+  }
+
+  .locationlist{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width:100%;
+
+  .locationimages{
+    justify-content: center;
+    align-items: center;
+    margin:10px;
+    display: flex;
+    height: 250px;
+    width: 400px;
+    min-width: 200px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    transition:.4s;
+    -webkit-box-shadow: -3px 3px 14px -1px rgba(0,0,0,0.75);
+    -moz-box-shadow: -3px 3px 14px -1px rgba(0,0,0,0.75);
+    box-shadow: -3px 3px 14px -1px rgba(0,0,0,0.75);
+      &:nth-child(1){
+        background-image: url("~/images/innsbruck.jpg");
+    }
+      &:nth-child(2){
+      background-image: url("~/images/kufstein.jpg");
+
+    }
+      &:nth-child(3){
+      background-image: url("~/images/stjohann.jpg");
+    }
+
+    }
+
+    .locationimages:hover{
+        transition: .2s;
+        background-position: bottom;
+      }
+
+    .filter{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height:100%;
+      background-color:rgba(0, 0, 0, 0.52);
+
+      .information{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    }
+  }
+}
