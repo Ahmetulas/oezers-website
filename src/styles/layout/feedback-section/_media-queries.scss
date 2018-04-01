@@ -1,0 +1,113 @@
+
+@media (max-width: $tablet-width-big) {
+
+}
+@media (max-width: $tablet-width-small) {
+  section.feedback div.content-area{
+
+    div.caption {
+      h3 {
+        width: 80%;
+      }
+      p {
+        width: 80%;
+      }
+    }
+    form {
+      textarea {
+        width: 80%;
+      }
+      input.btn {
+
+      }
+    }
+  }
+}
+@media (max-width: $tablet-width-xsmall) {
+  section.feedback div.content-area{
+    div.caption {
+      margin-left: 0;
+      h3 {
+        width: 90%;
+        margin: auto;
+      }
+      p {
+        margin: auto;
+        width: 90%;
+      }
+    }
+    form {
+      margin-left: 0;
+      textarea {
+      width: 90%;
+      margin: auto;
+
+      }
+      input.btn {
+        margin: auto;
+
+      }
+    }
+  }
+}
+@media (max-width: $smartphone-width-big) {
+  section.feedback div.content-area{
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    div.caption {
+      margin-left: 0;
+      
+      h3 {
+        font-size: 30px;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+  section.feedback div.image-area {
+    width: 100%;
+    &::before {
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 320px) {
+  section.feedback {
+    height: 100vh;
+    width: 100%;
+  }
+  section.feedback div.content-area{
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    div.caption {
+      h3 {
+        margin: auto;
+        font-size: 30px;
+      }
+
+      p {
+        margin: auto;
+
+        font-size: 18px;
+      }
+    }
+    form {
+      justify-content: space-around;
+
+    }
+  }
+  section.feedback div.image-area {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    &::before {
+      height: 100vh;
+      width: 100%;
+    }
+  }
+}

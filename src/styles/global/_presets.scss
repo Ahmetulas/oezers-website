@@ -9,4 +9,11 @@
 body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
+  width: 100%;
+  min-height: 100vh;
 }
+$tablet-width-big: 1366px;
+$tablet-width-small: 1280px;
+$tablet-width-xsmall: 1024px;
+$smartphone-width-big: 768px;
+$smartphone-width-small: 375px;

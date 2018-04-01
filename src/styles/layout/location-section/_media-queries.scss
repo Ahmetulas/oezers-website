@@ -1,0 +1,27 @@
+
+@media (max-width: $tablet-width-big) {
+
+}
+@media (max-width: $tablet-width-small) {
+
+}
+@media (max-width: $tablet-width-xsmall) {
+
+}
+@media (max-width: $smartphone-width-big) {
+  section.locations {
+    h2.location-header {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 320px) {
+  section.locations {
+    h2.location-header {
+      font-size: 24px;
+    }
+  }
+}

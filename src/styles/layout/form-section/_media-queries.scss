@@ -1,0 +1,48 @@
+@media (max-width: $tablet-width-big) {
+
+}
+@media (max-width: $tablet-width-small) {
+
+}
+@media (max-width: $tablet-width-xsmall) {
+  section.formcontainer {
+    h1 {
+      width: 80%;
+      margin: auto;
+    }
+  }
+}
+@media (max-width: $smartphone-width-big) {
+  section.formcontainer {
+    h1 {
+      font-size: 25px;
+    }
+    form {
+      width: 100%;
+      margin: 0;
+      padding-bottom: 20px;
+      input[type="text"], input[type="email"] {
+        width: 90%;
+        margin: 10px auto;
+      }
+      textarea.inputfield {
+        width: 90%;
+        margin: 10px auto;
+      }
+      input[type="submit"] {
+        width: auto;
+        height: auto;
+        padding: 20px 40px;
+        margin: auto;
+      }
+    }
+  }
+}
+@media (max-width: 320px) {
+  section.formcontainer {
+    height: 120vh;
+    form input[type="submit"] {
+      height: inherit;
+    }
+  }
+}

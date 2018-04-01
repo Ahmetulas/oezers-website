@@ -1,69 +1,150 @@
-.feedbackcontainer{
-display: flex;
-justify-content: center;
-align-items: center;
-flex-direction: column;
-width: 100%;
-height: 70vh;
-background-image: url('https://wallpaperscraft.com/image/grass_glare_glitter_light_bright_49660_1366x768.jpg');
-background-position:center;
-background-size: cover;
-
-
-.filter{
-  justify-content: center;
+section.feedback {
+  // width: 100%;
+  height: 50vh;
   display: flex;
-  width: 100%;
-  height: 100vh;
-  background-color:  rgba(0, 0, 0, 0.69);
+  transition: 1s;
+  opacity: 0;
+  &.animate {
+    animation: slideUp .75s ease forwards;
+    div.image-area {
+      animation: slideIn .5s ease forwards .75s;
+      &::before {
+        animation: slideIn .5s ease-in-out forwards 1.25s;
+      }
+    }
+
+    div.content-area div.caption {
+      animation: slideUpText 1.2s ease forwards;
+    }
+
+    div.content-area form {
+      animation: slideUpText 1.2s ease .3s forwards;
+    }
+  }
+
+  div.image-area {
+    width: 30%;
+    height: 100%;
+    background-color: #FFFFF1;
+    transition: 1s;
+    opacity: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30%;
+      height: 50vh;
+      background-color: rgba(0,0,0, .4);
+      transition: 1s;
+      opacity: 0;
+    }
+  }
+
+  div.content-area {
+    background-color: rgba(0,0,0, .4);
+    color: #FFF;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: 1s;
+
+    div.caption {
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      transition: 1s;
+      margin-left: 20px;
+      opacity: 0;
+
+      h3 {
+        margin: 20px 0;
+        width: 700px;
+        font-size: 30px;
+        transition: 1s;
+
+      }
+      p {
+        width: 700px;
+        font-size: 22px;
+        transition: 1s;
+
+      }
+    }
+
+    form {
+      margin-left: 20px;
+      width: 100%;
+      height: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+      transition: 1s;
+      opacity: 0;
+
+      textarea {
+        width: 700px;
+        height: 40%;
+        max-width: 700px;
+        max-height: 70%;
+        padding: 10px;
+        font-size: 18px;
+        font-family: "Open Sans", sans-serif;
+        outline: none;
+        border: none;
+      }
+      input.btn {
+        border: none;
+        outline: none;
+        padding: 15px 30px;
+        border-radius: 5px;
+        background-color: #3498db;
+        color: #FFF;
+        box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.75);
+        transition: 1s;
+        margin-bottom: 30px;
+        &:hover {
+          box-shadow: none;
+          transition: 1s;
+        }
+      }
+    }
+  }
 }
 
-.feedback{
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  color: white;
-  margin:20px;
-  display:flex;
-  flex-direction: column;
-
-  .header{
-    margin-bottom: 12px;
-    font-weight: bold;
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
   }
-  .text{
-    margin-bottom: 20px;
-  }
-
-  textarea{
-    // margin-left: 40%;
-    width: 50%;
-    height: 10px;
-    outline:none;
-    resize: none;
-    font-size: 130px;
-    margin-bottom: 10px;
-  }
-
-  input[type="button"]{
-    margin-left: 12px;
-    margin-top: 20px;
-    border-radius: 5px;
-    width:105px;
-    height: 40px;
-    color: white;
-    background-color: rgb(13, 155, 254);
-    font-size: 14px;
-    outline: none;
-    cursor: pointer;
-  }
-  .inputfield{
-    border-color: lightgrey;
-    resize: none;
-    height: 20vh;
-    font-size: 16px;
-    padding-top: 10px;
+  to {
+    transform: none;
+    opacity: 1;
   }
 }
 
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-200px)
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes slideUpText {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
 }

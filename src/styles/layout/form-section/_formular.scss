@@ -4,10 +4,14 @@
   flex-direction: column;
   height: 90vh;
   width: 90%;
-  margin: auto;
+  margin: 30px auto;
   margin-bottom: 20px;
   justify-content: flex-start;
   border: 1px solid lightgrey;
+  opacity: 0;
+  &.animate {
+    animation: slide .75s forwards ease;
+  }
 
 h1{
   font-family: 'Titillium Web', sans-serif;
@@ -18,7 +22,7 @@ h1{
   font-size: 33px;
 }
 
-.formular{
+form{
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -26,17 +30,24 @@ h1{
   margin-left: 100px;
   flex-direction: column;
 
-  input[type="button"]{
+  input[type="submit"]{
     margin-left: 12px;
     margin-top: 20px;
     border-radius: 5px;
-    width:13%;
-    height: 50px;
+    padding: 20px 40px;
     color: white;
     background-color: rgb(13, 155, 254);
+    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.36);
     font-size: 14px;
     outline: none;
     cursor: pointer;
+    border: none;
+    transition: 1s;
+
+    &:hover {
+      transition: 1s;
+      box-shadow: none;
+    }
   }
 
 .inputfield{
@@ -46,29 +57,45 @@ h1{
   font-size: 16px;
   outline: none;
   margin: 12px;
+  box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.36);
+  transition: 1s;
+
+  &:focus {
+    box-shadow: none;
+  }
 
 
   &:nth-child(1) {
     display: flex;
     height: 6.5vh;
-    -webkit-box-shadow: 1px 1px 29px 0px rgba(2,0,0,0.36);
-    -moz-box-shadow: 1px 1px 29px 0px rgba(3,0,0,0.36);
-    box-shadow: 1px 1px 9px 0px rgba(0,0,0,0.36);
-
-
+    border: none;
   }
   &:nth-child(2) {
     height: 6.5vh;
+    border: none;
     display: flex;
   }
   &:nth-child(3){
     border-color: lightgrey;
+    font-family: "Open Sans", sans-serif;
     resize: none;
     height: 300px;
     font-size: 16px;
     padding-top: 10px;
+    border: none;
   }
 }
 
 }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }

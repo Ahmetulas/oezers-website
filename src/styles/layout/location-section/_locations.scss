@@ -1,9 +1,14 @@
 .locations{
+  margin: 50px auto;
+  h2 {
+    font-size: 30px;
+    margin: auto;
+  }
   display: flex;
   width:100%;
-  height: 50vh;
   flex-direction: column;
   justify-content: center;
+
 
 
   .location-header{
@@ -12,12 +17,17 @@
 
   .locationlist{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     width:100%;
 
   .locationimages{
+    &.animate {
+      animation: slideLocation 1s ease forwards;
+    }
+    opacity: 0;
     justify-content: center;
     align-items: center;
     margin:10px;
@@ -65,5 +75,16 @@
         flex-direction: column;
       }
     }
+  }
+}
+
+@keyframes slideLocation {
+  from {
+    opacity: 0;
+    transform: translateY(100px) scale(1.1)  skewX(30deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
   }
 }
